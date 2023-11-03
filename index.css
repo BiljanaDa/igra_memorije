@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  transition: transform 0.5s;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+  background-color: blue;
+}
+
+.card .number {
+  visibility: hidden;
+}
+
+.card.flipped .number {
+  visibility: visible;
+  transform: rotateY(
+    180deg
+  ); /* Rotiramo broj u početni položaj kada se kartica okrene */
+}
+
+.message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  z-index: 1;
+  width: 200px; /* Dodajte širinu */
+  height: 100px; /* Dodajte visinu */
+  color: black; /* Dodajte boju teksta */
+}
+.timer {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}

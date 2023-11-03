@@ -1,23 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Memory Game</title>
     <link rel="stylesheet" href="index.css" />
-    <style>
-      body {
-        width: 80vw;
-        height: 80vh;
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
-      }
-    </style>
   </head>
   <body>
+    <div class="game-container">
+      <button class="start-button" onclick="startGame()">Start Game</button>
+      <button id="restart-button" style="display: none" onclick="startGame()">Restart Game</button>
+      
+      <div class="game-board"></div>
+      <div class="message" style="display: none"></div>
+      <div class="timer" style="display: none">
+        Time Left: <span id="time-left">60</span> 
+      
+      </div>
     <script src="index.js"></script>
   </body>
 </html>
